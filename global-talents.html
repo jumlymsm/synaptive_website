@@ -236,14 +236,15 @@
 
   /* ── CTA BAND ── */
   .cta-band {
-    text-align: center; padding: 80px 5%;
-    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(0,212,170,.12) 0%, transparent 70%);
+    text-align: center; padding: 100px 48px;
+    background: radial-gradient(ellipse 70% 70% at 50% 0%, rgba(0,140,100,0.14) 0%, transparent 70%), var(--bg-darkest);
   }
   .cta-band h2 {
-    font-family: var(--font-display); font-size: clamp(2rem,3.5vw,3rem);
-    margin-bottom: 1rem;
+    font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
   }
-  .cta-band p { color: var(--gray); max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+  .cta-band p { color: var(--gray); max-width: 480px; margin: 0 auto 40px; line-height: 1.7; }
+  .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
   .btn-outline {
     border: 1.5px solid var(--teal); color: var(--teal);
     padding: .7rem 1.8rem; border-radius: 6px; font-weight: 600;
@@ -588,11 +589,14 @@
 </section>
 
 <!-- ── CTA ── -->
-<div class="cta-band">
+<div class="cta-band" id="cta">
+  <div class="section-label">Get Started</div>
   <h2>Ready to Scale Your Team?</h2>
   <p>Tell us what you need and we'll have qualified candidates in your inbox within 48 hours.</p>
-  <a href="index.html#cta" class="btn-primary">Start Your Search</a>
-  <a href="index.html" class="btn-outline">Back to Home</a>
+  <div class="cta-actions">
+    <a href="index.html#cta" class="btn-primary">Start Your Search</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+  </div>
 </div>
 
 <!-- ── FOOTER ── -->
