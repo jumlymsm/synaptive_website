@@ -144,27 +144,27 @@
   /* ── PROCESS TIMELINE ── */
   .process-section { background: var(--bg-dark); }
   .timeline {
-    position: relative; margin-top: 3rem;
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    position: relative; margin-top: 4rem;
+    display: grid; grid-template-columns: repeat(5, 1fr);
     gap: 0;
   }
   .timeline::before {
-    content: ''; position: absolute; top: 28px; left: 0; right: 0;
-    height: 2px; background: linear-gradient(90deg, var(--teal), var(--teal-dim), transparent);
+    content: ''; position: absolute; top: 40px; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal-dim), transparent);
   }
-  .timeline-step { text-align: center; padding: 0 1rem 2rem; position: relative; }
+  .timeline-step { text-align: center; padding: 0 1.5rem 3rem; position: relative; }
   .step-num {
-    width: 56px; height: 56px; border-radius: 50%;
+    width: 80px; height: 80px; border-radius: 50%;
     background: var(--bg-darkest); border: 2px solid var(--teal);
     display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-display); font-size: 1.3rem; color: var(--teal);
-    margin: 0 auto 1rem; position: relative; z-index: 1;
+    font-family: var(--font-display); font-size: 1.6rem; color: var(--teal);
+    margin: 0 auto 1.5rem; position: relative; z-index: 1;
   }
   .timeline-step h4 {
-    font-family: var(--font-display); font-size: 1.05rem;
-    color: var(--white); margin-bottom: .4rem;
+    font-family: var(--font-display); font-size: 1.2rem;
+    color: var(--white); margin-bottom: .6rem;
   }
-  .timeline-step p { font-size: .84rem; color: var(--gray); line-height: 1.55; }
+  .timeline-step p { font-size: .95rem; color: var(--gray); line-height: 1.65; }
 
   /* ── WHY US ── */
   .why-grid {
