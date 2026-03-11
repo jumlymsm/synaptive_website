@@ -134,7 +134,11 @@
     box-shadow: 0 12px 40px rgba(0,212,170,.13);
   }
   .app-card-logo {
-    font-size: 2.2rem; margin-bottom: 1rem;
+    height: 48px; margin-bottom: 1.2rem;
+    display: flex; align-items: center;
+  }
+  .app-card-logo img {
+    height: 48px; width: auto; object-fit: contain;
   }
   .app-card h3 {
     font-family: var(--font-display);
@@ -227,7 +231,7 @@
 
   <div class="app-grid">
     <div class="app-card">
-      <div class="app-card-logo">🪟</div>
+      <div class="app-card-logo"><img src="https://img.icons8.com/fluency/96/microsoft-365.png" alt="Microsoft 365"></div>
       <h3>Microsoft 365</h3>
       <p>The complete productivity suite for modern businesses — from email and documents to video calls and cloud storage.</p>
       <ul class="app-features">
@@ -240,7 +244,7 @@
     </div>
 
     <div class="app-card">
-      <div class="app-card-logo">🔵</div>
+      <div class="app-card-logo"><img src="https://img.icons8.com/color/96/google-workspace.png" alt="Google Workspace"></div>
       <h3>Google Workspace</h3>
       <p>A cloud-first productivity platform built for teams that move fast — seamless, browser-based, and always accessible.</p>
       <ul class="app-features">
@@ -266,7 +270,7 @@
 
   <div class="app-grid">
     <div class="app-card">
-      <div class="app-card-logo">🟠</div>
+      <div class="app-card-logo"><img src="https://img.icons8.com/color/96/zoho.png" alt="Zoho"></div>
       <h3>Zoho</h3>
       <p>An all-in-one business suite covering CRM, finance, HR, marketing, and more — designed to scale with your business.</p>
       <ul class="app-features">
@@ -279,7 +283,7 @@
     </div>
 
     <div class="app-card">
-      <div class="app-card-logo">🟣</div>
+      <div class="app-card-logo"><img src="https://img.icons8.com/color/96/odoo.png" alt="Odoo"></div>
       <h3>Odoo</h3>
       <p>A fully integrated open-source ERP platform that brings all your business processes under one roof.</p>
       <ul class="app-features">
