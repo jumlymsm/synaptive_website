@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(head -5 grep -n \"logo.jpeg\\\\|nav-logo.*href\" \"c:/Users/jumly/OneDrive/Synaptive Website/ai-automation.html\")",
+      "Bash(head -5 grep -n \"logo.jpeg\\\\|nav-logo.*href\" \"c:/Users/jumly/OneDrive/Synaptive Website/Services.html\")"
+    ]
+  }
+}
