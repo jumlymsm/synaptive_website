@@ -619,11 +619,29 @@
         <!-- Microsoft Power Automate -->
         <div class="platform-item">
           <div class="plogo" style="background:#fff">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-              <!-- Back chevron: dark blue -->
-              <path d="M5 8 L23 24 L5 40 L14 24 Z" fill="#0062AD"/>
-              <!-- Front chevron: lighter blue, offset right -->
-              <path d="M17 8 L38 24 L17 40 L26 24 Z" fill="#00A4EF"/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-5 10.4 102 77.6" width="40" height="40">
+              <defs>
+                <linearGradient id="pa0" x1="43" y1="55" x2="29" y2="10" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0D36A5"/><stop offset="1" stop-color="#1152D4"/>
+                </linearGradient>
+                <linearGradient id="pa1" x1="46" y1="10" x2="46" y2="86" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#84CAFF"/><stop offset="1" stop-color="#61B1FB"/>
+                </linearGradient>
+                <linearGradient id="pa2" x1="37.5" y1="10" x2="37.5" y2="86" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#3B90F5"/><stop offset="1" stop-color="#2A78EE"/>
+                </linearGradient>
+                <clipPath id="pac"><rect width="96" height="96" fill="white"/></clipPath>
+                <mask id="pam" mask-type="alpha" maskUnits="userSpaceOnUse" x="-1" y="10" width="97" height="76">
+                  <path d="M61.2116 10C62.3496 10 63.4337 10.4847 64.1925 11.3328L94.6136 45.3328C95.9723 46.8514 95.9723 49.1486 94.6136 50.6672L64.1925 84.6672C63.4337 85.5153 62.3496 86 61.2116 86H3.94634C0.488777 86 -1.34012 81.9095 0.965366 79.3328L29 48L0.965366 16.6672C-1.34012 14.0905 0.488777 10 3.94634 10H61.2116Z" fill="white"/>
+                </mask>
+              </defs>
+              <g clip-path="url(#pac)">
+                <g mask="url(#pam)">
+                  <path d="M63 10L29 48L-5 10H63Z" fill="url(#pa0)"/>
+                  <path d="M-5 86L63 10L97 48L63 86H-5Z" fill="url(#pa1)"/>
+                  <path d="M-5 86L63 10L80 29L29 86H-5Z" fill="url(#pa2)"/>
+                </g>
+              </g>
             </svg>
           </div>
           <span class="pname">Power Automate</span>
