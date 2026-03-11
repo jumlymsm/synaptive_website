@@ -182,11 +182,19 @@
   .why-card p { font-size: .9rem; color: var(--gray); line-height: 1.6; }
 
   /* ── DISCIPLINES DETAIL ── */
+  .disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  @media (max-width: 768px) {
+    .disciplines-grid { grid-template-columns: 1fr; }
+  }
   .discipline-row {
-    display: block;
-    margin-bottom: 4rem;
     background: var(--bg-card); border: 1px solid var(--teal-border);
     border-radius: 16px; padding: 2.5rem;
+    margin-bottom: 0;
   }
   .discipline-row.reverse { direction: ltr; }
   .disc-content h2 {
@@ -372,6 +380,7 @@
   <div class="section-label">Deep Dive</div>
   <h2 class="section-heading">What We Deliver in Each Track</h2>
 
+  <div class="disciplines-grid">
   <!-- IT & Infra -->
   <div class="discipline-row reveal" style="margin-top:3rem;">
     <div class="disc-content">
@@ -460,6 +469,7 @@
     </div>
   </div>
 
+  </div><!-- end disciplines-grid -->
 </section>
 
 <!-- ── PROCESS TIMELINE ── -->
