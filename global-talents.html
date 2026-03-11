@@ -183,11 +183,12 @@
 
   /* ── DISCIPLINES DETAIL ── */
   .discipline-row {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 3rem; align-items: center; margin-bottom: 5rem;
+    display: block;
+    margin-bottom: 4rem;
+    background: var(--bg-card); border: 1px solid var(--teal-border);
+    border-radius: 16px; padding: 2.5rem;
   }
-  .discipline-row.reverse { direction: rtl; }
-  .discipline-row.reverse > * { direction: ltr; }
+  .discipline-row.reverse { direction: ltr; }
   .disc-content h2 {
     font-family: var(--font-display); font-size: clamp(1.7rem,2.5vw,2.2rem);
     line-height: 1.18; margin-bottom: 1rem;
@@ -383,13 +384,6 @@
         <li>24/7 monitoring, incident response, and capacity planning</li>
       </ul>
     </div>
-    <div class="disc-visual">
-      <div class="vis-label">Talent Availability</div>
-      <div class="bar-row"><div class="bar-label"><span>Cloud Architects</span><span>92%</span></div><div class="bar-track"><div class="bar-fill" style="--w:.92" data-w="0.92"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>DevOps Engineers</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" style="--w:.88" data-w="0.88"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Security Specialists</span><span>79%</span></div><div class="bar-track"><div class="bar-fill" style="--w:.79" data-w="0.79"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Network Engineers</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" style="--w:.85" data-w="0.85"></div></div></div>
-    </div>
   </div>
 
   <!-- Software Eng -->
@@ -404,13 +398,6 @@
         <li>Automated testing, code review, and quality gates</li>
         <li>Technical leadership and engineering management</li>
       </ul>
-    </div>
-    <div class="disc-visual">
-      <div class="vis-label">Skill Distribution</div>
-      <div class="bar-row"><div class="bar-label"><span>Front-End</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.90"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Back-End</span><span>87%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.87"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Mobile</span><span>76%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.76"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>QA / Testing</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.82"></div></div></div>
     </div>
   </div>
 
@@ -427,13 +414,6 @@
         <li>ERP implementation support (Xero, QuickBooks, SAP)</li>
       </ul>
     </div>
-    <div class="disc-visual">
-      <div class="vis-label">Expertise Levels</div>
-      <div class="bar-row"><div class="bar-label"><span>Senior Accountants</span><span>83%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.83"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Financial Analysts</span><span>78%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.78"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Tax Specialists</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.70"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Controllers</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.65"></div></div></div>
-    </div>
   </div>
 
   <!-- Legal -->
@@ -448,13 +428,6 @@
         <li>Corporate governance and entity management</li>
         <li>Legal research and precedent analysis</li>
       </ul>
-    </div>
-    <div class="disc-visual">
-      <div class="vis-label">Practice Areas</div>
-      <div class="bar-row"><div class="bar-label"><span>Contract Law</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.88"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Compliance</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.82"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>IP &amp; Patents</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.65"></div></div></div>
-      <div class="bar-row"><div class="bar-label"><span>Corporate Law</span><span>72%</span></div><div class="bar-track"><div class="bar-fill" data-w="0.72"></div></div></div>
     </div>
   </div>
 
