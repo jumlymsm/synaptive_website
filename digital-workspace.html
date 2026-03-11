@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Workspace — Synaptiv</title>
+<link rel="preconnect" href="https://fonts.cdnfonts.com">
+<link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-darkest: #040d14;
+    --bg-dark: #071520;
+    --bg-card: #0b1e2d;
+    --bg-card2: #0d2236;
+    --teal: #00d4aa;
+    --teal-dim: #00a884;
+    --teal-glow: rgba(0,212,170,0.15);
+    --teal-border: rgba(0,212,170,0.25);
+    --white: #f0f6ff;
+    --gray: #8aa4b8;
+    --gray-dim: #4a6275;
+    --font-display: 'Coolvetica', sans-serif;
+    --font-body: 'Coolvetica', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg-darkest);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+    background: rgba(4,13,20,0.92);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--teal-border);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display);
+    font-size: 1.55rem; font-weight: 700; letter-spacing: .04em;
+    color: var(--white); text-decoration: none;
+  }
+  .nav-links { list-style: none; display: flex; gap: 2.2rem; }
+  .nav-links a {
+    color: var(--gray); text-decoration: none; font-size: .93rem;
+    font-weight: 500; letter-spacing: .03em; transition: color .2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+  .btn-primary {
+    background: var(--teal); color: #040d14;
+    padding: .55rem 1.4rem; border-radius: 6px;
+    font-weight: 700; font-size: .9rem; text-decoration: none;
+    transition: opacity .2s;
+  }
+  .btn-primary:hover { opacity: .85; }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 6rem 5%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  section.full-bg {
+    max-width: 100%;
+    padding: 6rem 5%;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+  .section-label {
+    font-size: .75rem; font-weight: 700; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.1; margin-bottom: 1.5rem;
+  }
+  .hero p {
+    color: var(--gray); font-size: 1.1rem; line-height: 1.7;
+    max-width: 640px; margin: 0 auto 2.5rem;
+  }
+
+  /* ── CATEGORY SECTION ── */
+  .category-section {
+    padding: 5rem 5%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .category-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .category-icon {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: var(--teal-glow); border: 1px solid var(--teal-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; flex-shrink: 0;
+  }
+  .category-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+  }
+  .category-desc {
+    color: var(--gray); font-size: 1rem; line-height: 1.7;
+    margin-bottom: 3rem; max-width: 760px;
+  }
+
+  /* ── APP CARDS ── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .app-card {
+    background: var(--bg-card); border: 1px solid var(--teal-border);
+    border-radius: 16px; padding: 2rem;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,212,170,.13);
+  }
+  .app-card-logo {
+    font-size: 2.2rem; margin-bottom: 1rem;
+  }
+  .app-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem; margin-bottom: .6rem;
+  }
+  .app-card p {
+    color: var(--gray); font-size: .93rem; line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+  .app-features { list-style: none; }
+  .app-features li {
+    display: flex; align-items: flex-start; gap: .6rem;
+    color: var(--gray); font-size: .88rem; margin-bottom: .5rem;
+  }
+  .app-features li::before {
+    content: '▹'; color: var(--teal); flex-shrink: 0;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--teal-border);
+    margin: 0 5%;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 6rem 5%;
+    background: var(--bg-dark);
+  }
+  .cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .cta-section p {
+    color: var(--gray); font-size: 1rem; margin-bottom: 2rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg-darkest);
+    border-top: 1px solid var(--teal-border);
+    padding: 2rem 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: var(--font-display); font-size: 1.3rem; color: var(--white);
+  }
+  .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--gray); text-decoration: none; font-size: .88rem;
+    transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--teal); }
+  .footer-copy { color: var(--gray-dim); font-size: .82rem; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="index.html">Synaptiv</a>
+  <ul class="nav-links">
+    <li><a href="global-talents.html">Global Talents</a></li>
+    <li><a href="ai-automation.html">AI Automation</a></li>
+    <li><a href="digital-workspace.html" class="active">Digital Workspace</a></li>
+    <li><a href="index.html#services">Services</a></li>
+  </ul>
+  <a class="btn-primary" href="#cta">Get Started</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="section-label">Digital Workspace</div>
+  <h1>The Tools Your Team Needs to <span style="color:var(--teal)">Work Smarter</span></h1>
+  <p>Empower your business with best-in-class productivity and business applications. From email and collaboration to CRM and ERP — we set it up, integrate it, and keep it running.</p>
+  <a href="#cta" class="btn-primary">Talk to Us</a>
+</section>
+
+<!-- ── PRODUCTIVITY APPLICATIONS ── -->
+<section class="category-section">
+  <div class="category-header">
+    <div class="category-icon">📋</div>
+    <h2>Productivity Applications</h2>
+  </div>
+  <p class="category-desc">Give your team the tools to collaborate, communicate, and get work done — from anywhere. We deploy, configure, and support leading productivity suites tailored to your workflow.</p>
+
+  <div class="app-grid">
+    <div class="app-card">
+      <div class="app-card-logo">🪟</div>
+      <h3>Microsoft 365</h3>
+      <p>The complete productivity suite for modern businesses — from email and documents to video calls and cloud storage.</p>
+      <ul class="app-features">
+        <li>Outlook, Teams, Word, Excel & PowerPoint</li>
+        <li>SharePoint & OneDrive for document management</li>
+        <li>Microsoft Teams for communication & collaboration</li>
+        <li>Power BI for business intelligence & reporting</li>
+        <li>Setup, migration & ongoing support</li>
+      </ul>
+    </div>
+
+    <div class="app-card">
+      <div class="app-card-logo">🔵</div>
+      <h3>Google Workspace</h3>
+      <p>A cloud-first productivity platform built for teams that move fast — seamless, browser-based, and always accessible.</p>
+      <ul class="app-features">
+        <li>Gmail, Meet, Chat & Calendar</li>
+        <li>Google Drive, Docs, Sheets & Slides</li>
+        <li>Admin console setup & user management</li>
+        <li>Data migration from existing platforms</li>
+        <li>Security configuration & compliance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ── BUSINESS APPLICATIONS ── -->
+<section class="category-section">
+  <div class="category-header">
+    <div class="category-icon">⚙️</div>
+    <h2>Business Applications</h2>
+  </div>
+  <p class="category-desc">Streamline your operations with powerful business platforms that connect your sales, finance, HR, and operations in one place. We implement and customise solutions that fit the way you work.</p>
+
+  <div class="app-grid">
+    <div class="app-card">
+      <div class="app-card-logo">🟠</div>
+      <h3>Zoho</h3>
+      <p>An all-in-one business suite covering CRM, finance, HR, marketing, and more — designed to scale with your business.</p>
+      <ul class="app-features">
+        <li>Zoho CRM — sales pipeline & customer management</li>
+        <li>Zoho Books — accounting & invoicing</li>
+        <li>Zoho People — HR & leave management</li>
+        <li>Zoho Campaigns — email marketing</li>
+        <li>Implementation, customisation & training</li>
+      </ul>
+    </div>
+
+    <div class="app-card">
+      <div class="app-card-logo">🟣</div>
+      <h3>Odoo</h3>
+      <p>A fully integrated open-source ERP platform that brings all your business processes under one roof.</p>
+      <ul class="app-features">
+        <li>Sales, CRM & invoicing</li>
+        <li>Inventory & supply chain management</li>
+        <li>Accounting & financial reporting</li>
+        <li>Manufacturing & project management</li>
+        <li>Custom module development & integration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-section" id="cta">
+  <div class="section-label">Get Started</div>
+  <h2>Ready to Upgrade Your Workspace?</h2>
+  <p>Let us help you choose, implement, and optimise the right tools for your business.</p>
+  <a href="mailto:hello@synaptiv.com" class="btn-primary">Contact Us</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Synaptiv</div>
+  <div class="footer-links">
+    <a href="global-talents.html">Global Talents</a>
+    <a href="ai-automation.html">AI Automation</a>
+    <a href="digital-workspace.html">Digital Workspace</a>
+    <a href="index.html#services">Services</a>
+  </div>
+  <div class="footer-copy">© 2025 Synaptiv. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
