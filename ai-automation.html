@@ -45,15 +45,16 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px; height: 68px;
-    background: rgba(4,13,20,0.85);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,212,170,0.08);
+    padding: 0 5%; height: 72px;
+    background: rgba(4,13,20,0.92);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--teal-border);
   }
 
   .nav-logo {
     display: flex; align-items: center; gap: 10px;
-    font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; letter-spacing: .04em;
+    font-family: var(--font-display);
+    font-size: 1.55rem; font-weight: 700; letter-spacing: .04em;
     color: var(--white); text-decoration: none;
   }
 
@@ -77,11 +78,7 @@
     border: none; cursor: pointer;
     transition: background .2s, transform .15s;
   }
-  .btn-primary:hover { background: #00e8bb; transform: translateY(-1px); }.btn-primary:hover {
-    background: #00f0c0;
-    transform: translateY(-1px);
-    box-shadow: 0 0 20px rgba(0,212,170,0.4);
-  }
+  .btn-primary:hover { background: #00e8bb; transform: translateY(-1px); }
 
   .btn-outline {
     background: transparent; color: var(--white);
