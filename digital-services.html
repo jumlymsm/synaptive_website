@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Offshore IT &amp; Digital Staffing Solutions for Australian Businesses | SYNAPTIV Global Talents</title>
+<meta name="description" content="SYNAPTIV provides managed offshore IT professionals, software developers, digital marketers, and designers for Australian businesses. Pre-vetted talent, fast onboarding, Australian-led oversight." />
+<link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg-darkest:#040d14;--bg-dark:#071520;--bg-card:#0b1e2d;--bg-card2:#0d2236;--teal:#00d4aa;--teal-dim:#00b898;--teal-glow:rgba(0,212,170,0.15);--teal-border:rgba(0,212,170,0.2);--white:#ffffff;--gray:#8ba8be;--gray-dim:#4a6880;--font-display:'Coolvetica','Inter',sans-serif;--font-body:'Inter',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;font-size:18px;}
+  body{background:var(--bg-darkest);color:var(--white);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px;background:rgba(4,13,20,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--teal-border);}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:1.55rem;font-weight:700;letter-spacing:.04em;color:var(--white);text-decoration:none;}
+  .nav-links{list-style:none;display:flex;align-items:center;gap:2.2rem;}
+  .nav-links a{color:var(--gray);text-decoration:none;font-size:1rem;font-weight:500;transition:color 0.2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--teal);}
+  .btn-primary{background:linear-gradient(135deg,#00d4aa,#00f0c8);color:#040d14;padding:.7rem 1.9rem;border-radius:50px;font-family:var(--font-body);font-weight:700;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;box-shadow:0 4px 18px rgba(0,212,170,0.35);transition:all .25s;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,212,170,0.55);}
+  .btn-outline{background:transparent;color:var(--white);padding:10px 22px;border-radius:50px;font-weight:600;font-size:0.88rem;text-decoration:none;border:1px solid rgba(255,255,255,0.25);cursor:pointer;transition:border-color 0.2s,background 0.2s;font-family:var(--font-body);}
+  .btn-outline:hover{border-color:var(--teal);background:rgba(0,212,170,0.08);}
+  .page-hero{padding:160px 5% 100px;max-width:960px;margin:0 auto;text-align:center;}
+  .hero-eyebrow{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.25);padding:6px 18px;border-radius:50px;margin-bottom:24px;}
+  .page-hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px;}
+  .page-hero p{color:var(--gray);font-size:1.05rem;line-height:1.7;max-width:700px;margin:0 auto 36px;}
+  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  section{padding:90px 5%;}
+  .section-inner{max-width:1200px;margin:0 auto;}
+  .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+  .section-h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:24px;}
+  .teal{color:var(--teal);}
+  .overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .overview-body p{color:var(--gray);font-size:0.92rem;line-height:1.8;margin-bottom:16px;}
+  .roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+  .role-card{background:var(--bg-card);border:1px solid rgba(0,212,170,0.1);border-radius:16px;padding:28px;transition:border-color 0.3s,transform 0.3s;}
+  .role-card:hover{border-color:var(--teal);transform:translateY(-4px);}
+  .role-icon{font-size:1.8rem;margin-bottom:16px;}
+  .role-card h3{font-family:var(--font-display);font-size:0.95rem;font-weight:800;margin-bottom:12px;}
+  .role-card p{font-size:0.82rem;color:var(--gray);line-height:1.65;}
+  .serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;}
+  .serve-item{background:var(--bg-card);border:1px solid rgba(0,212,170,0.1);border-radius:12px;padding:22px 24px;display:flex;align-items:flex-start;gap:12px;}
+  .serve-item::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;font-size:1rem;margin-top:2px;}
+  .serve-item span{color:var(--gray);font-size:0.87rem;line-height:1.6;}
+  .cta-band{background:radial-gradient(ellipse 70% 70% at 50% 0%,rgba(0,140,100,0.18) 0%,transparent 70%),var(--bg-darkest);padding:100px 5%;text-align:center;}
+  .cta-band h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:18px;}
+  .cta-band p{color:var(--gray);font-size:1rem;max-width:520px;margin:0 auto 40px;line-height:1.7;}
+  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:var(--bg-dark);border-top:1px solid rgba(0,212,170,0.08);padding:60px 5% 0;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding-bottom:48px;}
+  .footer-logo-wrap{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:14px;}
+  .footer-desc{color:var(--gray);font-size:0.82rem;line-height:1.7;}
+  .footer-col h4{font-family:var(--font-display);font-size:0.85rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;}
+  .footer-col ul{list-style:none;}
+  .footer-col ul li{margin-bottom:10px;color:var(--gray);font-size:0.84rem;}
+  .footer-col ul li a{color:var(--gray);text-decoration:none;transition:color 0.2s;}
+  .footer-col ul li a:hover{color:var(--teal);}
+  .footer-bottom{border-top:1px solid rgba(0,212,170,0.08);padding:20px 0;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;color:var(--gray-dim);font-size:0.78rem;flex-wrap:wrap;gap:10px;}
+  .footer-legal a{color:var(--gray-dim);text-decoration:none;}
+  .footer-legal a:hover{color:var(--teal);}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  @media(max-width:1024px){.roles-grid{grid-template-columns:repeat(2,1fr);}.overview-grid{grid-template-columns:1fr;}.serve-grid{grid-template-columns:repeat(2,1fr);}.footer-inner{grid-template-columns:1fr 1fr;}}
+  @media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.roles-grid{grid-template-columns:1fr;}.serve-grid{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Synaptiv" style="height:54px;width:auto;"> Synaptiv</a>
+  <ul class="nav-links">
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="global-talents.html" class="active">Global Talents</a></li>
+    <li><a href="ai-automation.html">AI Automation</a></li>
+    <li><a href="digital-presence.html">Digital Presence</a></li>
+  </ul>
+  <a href="#cta" class="btn-primary">Book a Free Discovery Call</a>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-eyebrow">Global Talents — Digital Services</div>
+  <h1>Offshore IT &amp; Digital Professionals, Managed for Your Business</h1>
+  <p>Build your digital and technology team with pre-vetted developers, designers, systems administrators, and digital marketers — delivered as a fully managed extension of your business.</p>
+  <div class="hero-ctas">
+    <a href="#cta" class="btn-primary">Build Your Digital Team</a>
+    <a href="mailto:hello@synaptiv.com.au" class="btn-outline">Talk to a Specialist</a>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section style="background:var(--bg-dark);">
+  <div class="section-inner">
+    <div class="overview-grid">
+      <div class="reveal">
+        <div class="section-label">Overview</div>
+        <h2 class="section-h2">The Digital Skills You Need,<br><span class="teal">Without the Local Talent Shortage</span></h2>
+        <p>Australia's technology and digital talent market is consistently ranked among the most competitive in the world. Demand for skilled developers, digital marketers, and IT professionals far outstrips local supply — and salaries reflect that imbalance.</p>
+        <p>SYNAPTIV's Digital Services talent track gives you access to a global pool of pre-vetted IT and digital professionals at significantly reduced cost — without compromising on quality, communication, or accountability.</p>
+        <p>Our offshore digital professionals are experienced in the tools, platforms, and frameworks used by Australian businesses. They integrate with your existing team through your project management tools, communication platforms, and development workflows — operating as a genuine extension of your internal capability.</p>
+      </div>
+      <div class="reveal">
+        <div style="background:var(--bg-card);border:1px solid var(--teal-border);border-radius:20px;padding:36px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;">Key Advantages</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;"><span style="color:var(--teal);font-size:1.2rem;flex-shrink:0;">⚡</span><div><div style="font-weight:600;font-size:0.9rem;margin-bottom:4px;">Operational in 5–10 Days</div><div style="color:var(--gray);font-size:0.82rem;">Pre-vetted talent ready to deploy fast</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start;"><span style="color:var(--teal);font-size:1.2rem;flex-shrink:0;">🛡️</span><div><div style="font-weight:600;font-size:0.9rem;margin-bottom:4px;">Australian-Led Management</div><div style="color:var(--gray);font-size:0.82rem;">Quality standards enforced at every level</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start;"><span style="color:var(--teal);font-size:1.2rem;flex-shrink:0;">🔗</span><div><div style="font-weight:600;font-size:0.9rem;margin-bottom:4px;">Fully Integrated</div><div style="color:var(--gray);font-size:0.82rem;">Works within your existing tools and workflows</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start;"><span style="color:var(--teal);font-size:1.2rem;flex-shrink:0;">📈</span><div><div style="font-weight:600;font-size:0.9rem;margin-bottom:4px;">Flexible &amp; Scalable</div><div style="color:var(--gray);font-size:0.82rem;">Scale up or down without lock-in commitments</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section style="background:var(--bg-darkest);">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:680px;margin:0 auto;">
+      <div class="section-label">Digital Roles We Place</div>
+      <h2 class="section-h2 reveal">IT &amp; Digital Professionals<br><span class="teal">Across Every Discipline</span></h2>
+    </div>
+    <div class="roles-grid">
+      <div class="role-card reveal">
+        <div class="role-icon">💻</div>
+        <h3>Software Development</h3>
+        <p>Full-stack, front-end, and back-end developers across a wide range of languages and frameworks. Web applications, mobile apps, APIs, e-commerce, and custom software development.</p>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-icon">🖥️</div>
+        <h3>Systems Administration &amp; IT Support</h3>
+        <p>Network engineers, systems administrators, helpdesk specialists, and cloud infrastructure professionals — experienced with Microsoft Azure, AWS, and Google Cloud environments.</p>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>User interface and user experience designers skilled in Figma, Adobe XD, and Sketch. From wireframes and prototyping to full design systems and production-ready assets.</p>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-icon">📣</div>
+        <h3>Digital Marketing Specialists</h3>
+        <p>SEO strategists, paid media managers, content marketers, social media specialists, and email marketing professionals — experienced in Australian digital channels and markets.</p>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-icon">📊</div>
+        <h3>Data Analysts &amp; Business Intelligence</h3>
+        <p>Data analysts, Power BI and Tableau specialists, SQL developers, and reporting professionals who transform raw data into business-ready insights.</p>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-icon">🧪</div>
+        <h3>QA &amp; Testing</h3>
+        <p>Manual and automation QA engineers experienced in Selenium, Cypress, Postman, and modern CI/CD testing pipelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section style="background:var(--bg-dark);">
+  <div class="section-inner">
+    <div style="max-width:780px;margin-bottom:36px;">
+      <div class="section-label">Who We Serve</div>
+      <h2 class="section-h2 reveal">Businesses We Support<br><span class="teal">Across Every Industry</span></h2>
+    </div>
+    <div class="serve-grid">
+      <div class="serve-item reveal"><span>Technology startups needing extended development capacity</span></div>
+      <div class="serve-item reveal"><span>Digital agencies seeking offshore production support</span></div>
+      <div class="serve-item reveal"><span>SMEs building their first in-house digital team</span></div>
+      <div class="serve-item reveal"><span>Enterprise IT departments augmenting with specialist offshore resources</span></div>
+      <div class="serve-item reveal"><span>Marketing agencies requiring offshore content, SEO, or paid media support</span></div>
+      <div class="serve-item reveal"><span>E-commerce businesses scaling their technology and digital marketing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band" id="cta">
+  <h2>Build Your Offshore<br><span style="color:var(--teal);">Digital &amp; IT Team Today</span></h2>
+  <p>Pre-vetted, fast to deploy, and professionally managed — your offshore digital team is closer than you think.</p>
+  <div class="cta-actions">
+    <a href="mailto:hello@synaptiv.com.au" class="btn-primary">Book a Free Discovery Call</a>
+    <a href="global-talents.html" class="btn-outline">Back to Global Talents</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo-wrap"><img src="assets/logo.png" alt="Synaptiv" style="height:44px;width:auto;"> Synaptiv</div>
+      <p class="footer-desc">Synaptiv is an Australian-led managed solutions company helping businesses scale smarter through global talent, AI automation, and digital presence solutions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul><li><a href="about-us.html">About Us</a></li><li><a href="global-talents.html">Global Talents</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="digital-presence.html">Digital Presence</a></li><li><a href="#cta">Contact Us</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Global Talents</h4>
+      <ul><li><a href="accounting-finance.html">Accounting &amp; Finance</a></li><li><a href="engineering-services.html">Engineering Services</a></li><li><a href="digital-services.html">Digital Services</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:hello@synaptiv.com.au">hello@synaptiv.com.au</a></li><li>1300 XXX XXX</li><li>Australia</li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Synaptiv Pty Ltd. All Rights Reserved.</span>
+    <div class="footer-legal"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+<script>
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
