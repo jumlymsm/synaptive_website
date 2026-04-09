@@ -7,19 +7,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-darkest: #040d14;
-    --bg-dark: #071520;
-    --bg-card: #0b1e2d;
-    --bg-card2: #0d2236;
-    --teal: #00d4aa;
-    --teal-dim: #00a884;
-    --teal-glow: rgba(0,212,170,0.15);
-    --teal-border: rgba(0,212,170,0.25);
-    --white: #f0f6ff;
-    --gray: #8aa4b8;
-    --gray-dim: #4a6275;
+    --bg-darkest: hsl(210, 20%, 99%);
+    --bg-dark: hsl(210, 20%, 96%);
+    --bg-card: hsl(0, 0%, 100%);
+    --bg-card2: hsl(210, 20%, 96%);
+    --teal: hsl(192, 82%, 45%);
+    --teal-dim: hsl(192, 75%, 38%);
+    --teal-glow: hsla(192, 82%, 45%, 0.10);
+    --teal-border: hsla(192, 82%, 45%, 0.2);
+    --white: hsl(213, 55%, 12%);
+    --gray: hsl(213, 15%, 50%);
+    --gray-dim: hsl(213, 15%, 65%);
+    --border-color: hsl(210, 20%, 92%);
+    --accent-navy: hsl(213, 80%, 25%);
     --font-display: 'Inter Tight', sans-serif;
-    --font-body: 'Coolvetica', sans-serif;
+    --font-body: 'Inter', sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; font-size: 18px; }
@@ -37,9 +39,9 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 72px;
-    background: rgba(4,13,20,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--teal-border);
+    border-bottom: 1px solid var(--border-color);
   }
   .nav-logo {
     display: flex; align-items: center; gap: 10px;
@@ -54,15 +56,15 @@
   }
   .nav-links a:hover, .nav-links a.active { color: var(--teal); }
   .btn-primary {
-    background: linear-gradient(135deg, #00d4aa, #00f0c8);
-    color: #040d14;
+    background: var(--teal);
+    color: #ffffff;
     padding: .7rem 1.9rem; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; text-decoration: none;
     border: none; cursor: pointer; letter-spacing: 0.01em;
     box-shadow: 0 4px 18px rgba(0,212,170,0.35);
     transition: all .25s;
   }
-  .btn-primary:hover { background: linear-gradient(135deg, #00ecd4, #00d4aa); box-shadow: 0 6px 28px rgba(0,212,170,0.55); transform: translateY(-2px); }
+  .btn-primary:hover { background: var(--teal-dim); box-shadow: 0 6px 28px hsla(192,82%,45%,0.4); transform: translateY(-2px); }
 
   /* ── SECTIONS ── */
   section {
@@ -327,7 +329,7 @@
 </div>
 
 <!-- ── FOOTER ── -->
-<footer style="background:var(--bg-dark);border-top:1px solid rgba(0,212,170,0.08);padding:60px 48px 0;">
+<footer style="background:var(--bg-dark);border-top:1px solid var(--border-color);padding:60px 48px 0;">
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding-bottom:48px;">
     <div>
       <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:14px;"><img src="assets/logo.png" alt="Synaptiv" style="height:44px;width:auto;"> Synaptiv</div>

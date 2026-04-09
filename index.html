@@ -7,18 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --bg-darkest: #040d14;
-    --bg-dark: #071520;
-    --bg-card: #0b1e2d;
-    --bg-card2: #0d2236;
-    --teal: #00d4aa;
-    --teal-dim: #00b898;
-    --teal-glow: rgba(0,212,170,0.15);
-    --teal-border: rgba(0,212,170,0.2);
-    --white: #ffffff;
-    --gray: #8ba8be;
-    --gray-dim: #4a6880;
-    --accent-blue: #0ff;
+    --bg-darkest: hsl(210, 20%, 99%);
+    --bg-dark: hsl(210, 20%, 96%);
+    --bg-card: hsl(0, 0%, 100%);
+    --bg-card2: hsl(210, 20%, 96%);
+    --teal: hsl(192, 82%, 45%);
+    --teal-dim: hsl(192, 75%, 38%);
+    --teal-glow: hsla(192, 82%, 45%, 0.10);
+    --teal-border: hsla(192, 82%, 45%, 0.2);
+    --white: hsl(213, 55%, 12%);
+    --gray: hsl(213, 15%, 50%);
+    --gray-dim: hsl(213, 15%, 65%);
+    --border-color: hsl(210, 20%, 92%);
+    --accent-navy: hsl(213, 80%, 25%);
     --font-display: 'Inter Tight', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
@@ -37,21 +38,16 @@
   h1,h2,h3,h4,h5,h6 { font-weight: 300 !important; }
 
   /* ─── NOISE OVERLAY ─── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.4;
-  }
+  body::before { display: none; }
 
   /* ─── NAV ─── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 72px;
-    background: rgba(4,13,20,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--teal-border);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .nav-logo {
@@ -76,22 +72,22 @@
   .nav-links a:hover { color: var(--white); }
 
   .btn-primary {
-    background: linear-gradient(135deg, #00d4aa, #00f0c8);
-    color: #040d14;
+    background: var(--teal);
+    color: #ffffff;
     padding: .7rem 1.9rem; border-radius: 50px;
     font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; text-decoration: none;
     border: none; cursor: pointer; letter-spacing: 0.01em;
     box-shadow: 0 4px 18px rgba(0,212,170,0.35);
     transition: all .25s;
   }
-  .btn-primary:hover { background: linear-gradient(135deg, #00ecd4, #00d4aa); box-shadow: 0 6px 28px rgba(0,212,170,0.55); transform: translateY(-2px); }
+  .btn-primary:hover { background: var(--teal-dim); box-shadow: 0 6px 28px hsla(192,82%,45%,0.4); transform: translateY(-2px); }
 
   .btn-outline {
     background: transparent;
     color: var(--white);
     padding: 10px 22px; border-radius: 8px;
     font-weight: 600; font-size: 0.88rem;
-    text-decoration: none; border: 1px solid rgba(255,255,255,0.25); cursor: pointer;
+    text-decoration: none; border: 1px solid var(--border-color); cursor: pointer;
     transition: border-color 0.2s, background 0.2s;
     font-family: var(--font-body);
   }
@@ -131,22 +127,19 @@
 
   .hero-slide:nth-child(1) {
     background:
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,140,100,0.22) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 40% at 20% 80%, rgba(0,60,100,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 0%, hsla(192,82%,45%,0.08) 0%, transparent 70%),
       var(--bg-darkest);
   }
 
   .hero-slide:nth-child(2) {
     background:
-      radial-gradient(ellipse 80% 60% at 80% 20%, rgba(0,80,160,0.25) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 40% at 10% 60%, rgba(0,140,100,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 80% 20%, hsla(213,80%,25%,0.07) 0%, transparent 70%),
       var(--bg-darkest);
   }
 
   .hero-slide:nth-child(3) {
     background:
-      radial-gradient(ellipse 80% 60% at 20% 20%, rgba(80,0,160,0.2) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 40% at 80% 70%, rgba(0,140,100,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 20% 20%, hsla(192,82%,45%,0.06) 0%, transparent 70%),
       var(--bg-darkest);
   }
 
@@ -157,7 +150,7 @@
 
   .hero-dot {
     width: 8px; height: 8px; border-radius: 999px;
-    background: rgba(255,255,255,0.25);
+    background: hsl(210, 20%, 85%);
     border: none; cursor: pointer; padding: 0;
     transition: background 0.3s, width 0.3s;
   }
@@ -239,8 +232,8 @@
   /* ─── STATS ─── */
   #stats {
     background: var(--bg-dark);
-    border-top: 1px solid rgba(0,212,170,0.08);
-    border-bottom: 1px solid rgba(0,212,170,0.08);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .stats-grid {
@@ -310,7 +303,7 @@
 
   .pillar-card {
     background: var(--bg-card);
-    border: 1px solid rgba(0,212,170,0.1);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 28px 24px 32px;
     transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -446,7 +439,7 @@
   .talent-track {
     display: flex; align-items: center; gap: 14px;
     padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .talent-track:last-of-type { border-bottom: none; }
@@ -499,7 +492,7 @@
 
   .why-card {
     background: var(--bg-card);
-    border: 1px solid rgba(0,212,170,0.1);
+    border: 1px solid var(--border-color);
     border-radius: 16px; padding: 28px 24px;
     text-align: left;
     transition: border-color 0.3s, transform 0.3s;
@@ -522,8 +515,7 @@
   /* ─── CTA SECTION ─── */
   #cta {
     text-align: center; padding: 100px 48px;
-    background: radial-gradient(ellipse 70% 70% at 50% 0%, rgba(0,140,100,0.14) 0%, transparent 70%),
-                var(--bg-darkest);
+    background: var(--bg-dark);
   }
 
   #cta h2 {
@@ -547,7 +539,7 @@
   /* ─── FOOTER ─── */
   footer {
     background: var(--bg-dark);
-    border-top: 1px solid rgba(0,212,170,0.08);
+    border-top: 1px solid var(--border-color);
     padding: 60px 48px 0;
   }
   .footer-inner {
@@ -575,7 +567,7 @@
   }
   .footer-col ul li a:hover { color: var(--teal); }
   .footer-bottom {
-    border-top: 1px solid rgba(0,212,170,0.08);
+    border-top: 1px solid var(--border-color);
     padding: 20px 0; max-width: 1200px; margin: 0 auto;
     display: flex; justify-content: space-between; align-items: center;
     color: var(--gray-dim); font-size: 0.78rem; flex-wrap: wrap; gap: 10px;
